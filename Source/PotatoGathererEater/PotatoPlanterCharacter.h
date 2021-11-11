@@ -4,7 +4,6 @@
 
 #include "CoreMinimal.h"
 #include "PotatoGathererEaterCharacter.h"
-#include "Potato.h"
 
 #include "PotatoPlanterCharacter.generated.h"
 
@@ -16,15 +15,4 @@ class POTATOGATHEREREATER_API APotatoPlanterCharacter : public APotatoGathererEa
 {
 	GENERATED_BODY()
 
-	UFUNCTION()
-	void PlantPotato();
-	
-private:
-	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-
-	UPROPERTY(EditAnywhere)
-	float _spawnDistance;
-
-	UPROPERTY(EditAnywhere)
-	TArray<TSubclassOf<APotato>> _potatoTypes;
 };
